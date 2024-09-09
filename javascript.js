@@ -77,10 +77,11 @@ function createCard(place, item) {
 1. eventlistening 
 2. change library 
 3. change textContent
-/*
+*/
 
 
 //Delete book
-function deleteBook(item) {
-  /* 1. delete from Library 
-     2. delete from page
+/* function deleteBook(item) {
+    1. delete from Library 
+    2. delete from page 
+*/
