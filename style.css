@@ -1,4 +1,5 @@
 body {
+    margin:0;
     display: flex;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,24 +8,25 @@ body {
 
 header {
     text-align: center;
-    height: 18vh;
+    height: 15vh;
     font-size: 10rem;
     background-color: antiquewhite;
 }
 
 main {
-    height: 75vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     padding:2px 2rem;
-    button {
-        font-size: 2rem;
-        width: 15vw;
-        align-self: center;
-        background-color: antiquewhite;
-        border-radius: 15px;
-        margin-bottom:1rem;
-    }
+}
+
+button {
+    font-size: 2rem;
+    width: max(200px,15vw);
+    align-self: center;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    margin-bottom:1rem;
 }
 
 .card-container {
@@ -34,13 +36,44 @@ main {
 }
 
 .card {
-    background-color:white;
+    background-color:antiquewhite;
+    border:2rem solid white;
     border-radius: 10px;
     height: 30vh;
-    padding:2rem;
+    padding-bottom:1rem;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    div {
+        margin:15px;
+        text-align:center;
+    }
 }
 
 footer {
-    height: 3vh;
+    height: 2vh;
     text-align: center;
+    position:relative;
+    bottom:10px;
+}
+
+dialog {
+    background-color:antiquewhite;
+    border:2rem solid white;
+    border-radius: 10px;
+    height: 50vh;
+    font-size: 1.5rem;
+    width:40vw;
+    input {
+        height: 4rem;
+        width: 100%;
+        font-size:inherit;
+        margin-bottom: 18px;
+    }
+    label {
+        font-size: 1.5rem;
+    }
+    button {
+        width: min-content;
+    }
 }

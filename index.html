@@ -5,36 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My library</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
+    <dialog>
+        <button>Close</button>
+        <form action="" method="">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div>
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages" placeholder="Input a number">
+            </div>
+            <div>
+                <label for="status">Have you read the book?</label>
+                <input type="text" id="status" name="status" placeholder="Yes / No">
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </dialog>
     <header>Library</header>
     <main>
         <button class="addBook">Add a book</button>
         <div class="card-container">
-            <div class="card">
-                <div class="title">Title</div>
-                <div class="author">Author</div>
-                <div class="pages">No. of pages</div>
-                <div class="status">Read</div>
-            </div>
-            <div class="card">
-                <div class="title">Title</div>
-                <div class="author">Author</div>
-                <div class="pages">No. of pages</div>
-                <div class="status">Read</div>
-            </div>
-            <div class="card">
-                <div class="title">Title</div>
-                <div class="author">Author</div>
-                <div class="pages">No. of pages</div>
-                <div class="status">Read</div>
-            </div>
+            <!-- <div class="card">
+                <button class="status">Read</button>
+                <button class="remove">Remove</button>
+            </div> -->
         </div>
     </main>
     <footer>
         <p>copyright @CharlieGu</p>
     </footer>
-    
 </body>
 </html>
