@@ -9,7 +9,7 @@ body {
 header {
     text-align: center;
     height: 15vh;
-    font-size: 10rem;
+    font-size: 8rem;
     background-color:cadetblue;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2) ;
 }
@@ -28,6 +28,8 @@ button {
     background-color: cadetblue;
     border-radius: 15px;
     margin:1rem;
+    border: 0px;
+    padding: 5px;
 }
 
 .card-container {
@@ -40,13 +42,13 @@ button {
     background-color:antiquewhite;
     border:2rem solid white;
     border-radius: 10px;
-    height: 30vh;
+    height: 35vh;
     padding-bottom:1rem;
     font-size: 2.5rem;
     display: flex;
     flex-direction: column;
     div {
-        margin:15px;
+        margin: 2%;
         text-align:center;
     }
 }
@@ -62,11 +64,11 @@ dialog {
     background-color:antiquewhite;
     border:2rem solid white;
     border-radius: 10px;
-    height: 50vh;
+    height: 60vh;
     font-size: 1.5rem;
     width:40vw;
     input {
-        height: 4rem;
+        height: 5vh;
         width: 100%;
         font-size:inherit;
         margin-bottom: 18px;
