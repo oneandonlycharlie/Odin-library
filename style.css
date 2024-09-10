@@ -78,5 +78,6 @@ dialog {
     }
     button {
         width: min-content;
+        padding: 10px;
     }
 }
