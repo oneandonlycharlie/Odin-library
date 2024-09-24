@@ -12,22 +12,22 @@
         <button>Close</button>
         <form action="" method="">
             <div>
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title">
+                <label for="title">Title <span class="req">*</span></label>
+                <input type="text" id="title" name="title" required />
             </div>
             <div>
-                <label for="author">Author</label>
-                <input type="text" id="author" name="author">
+                <label for="author">Author<span class="req">*</span></label>
+                <input type="text" id="author" name="author" required />
             </div>
             <div>
-                <label for="pages">Pages</label>
-                <input type="number" id="pages" name="pages" placeholder="Input a number">
+                <label for="pages">Pages<span class="req">*</span></label>
+                <input type="number" id="pages" name="pages" placeholder="Input a number" min="0" required />
             </div>
             <div>
-                <label for="status">Have you read the book?</label>
-                <input type="text" id="status" name="status" placeholder="Yes / No">
+                <label for="status">Have you read the book?<span class="req">*</span></label>
+                <input type="text" id="status" name="status" placeholder="yes / no" pattern = "yes||no" required >
             </div>
-            <button type="submit">Add</button>
+            <button type="submit">Add</button> <button type="reset">Reset</button>
         </form>
     </dialog>
     <header>Library</header>

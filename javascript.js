@@ -1,10 +1,13 @@
 // Variables //
 const myLibrary = [];
 const cardContainer = document.querySelector(".card-container")
-const addButtion = document.querySelector(".addBook")
+const addButton = document.querySelector(".addBook")
 const dialog = document.querySelector("dialog")
 const closeButton = document.querySelector("dialog button")
-const submitButtion = document.querySelector("dialog form button")
+const submitButton = document.querySelector("dialog form button")
+const form = document.getElementsByTagName("form")
+const inputs = document.querySelectorAll("input")
+const resetButton = document.querySelector("body > dialog > form > button:nth-child(6)")
 
 // This function creates a book instance //
 function Book(title, author, pages, status) {
@@ -20,8 +23,12 @@ function addBookToLibrary(item) {
     item.number = myLibrary.indexOf(item);
 }
 
+const allChecked = (inputs) => {
+    return [...inputs].every((element)=> {element.checkValidity()})
+}
+
 // Activate an input window
-addButtion.addEventListener("click", (e)=> {
+addButton.addEventListener("click", (e)=> {
     dialog.showModal();
     e.preventDefault();
 })
@@ -30,21 +37,30 @@ closeButton.addEventListener("click", () => {
     dialog.close();
 })
 
-submitButtion.addEventListener("click", (e)=> {
+resetButton.addEventListener("click", ()=> {submitButton.removeAttribute("disabled","")});
+
+submitButton.addEventListener("click", (e)=> {
     e.preventDefault();
-    let title = document.getElementById("title");
-    let author = document.getElementById("author");
-    let pages = document.getElementById("pages");
-    let status = document.getElementById("status");
-    let newBook = new Book(title.value, author.value, pages.value, status.value.toLowerCase());
-    addBookToLibrary(newBook);
-    dialog.close();
-    title.value = title.defaultValue;
-    author.value = author.defaultValue;
-    pages.value = author.defaultValue;
-    status.value = status.defaultValue;
-    createCard(cardContainer, newBook)
+    if (allChecked(inputs)){
+        let title = document.getElementById("title");
+        let author = document.getElementById("author");
+        let pages = document.getElementById("pages");
+        let status = document.getElementById("status");
+        let newBook = new Book(title.value, author.value, pages.value, status.value.toLowerCase());
+        addBookToLibrary(newBook);
+        dialog.close();
+        title.value = title.defaultValue;
+        author.value = author.defaultValue;
+        pages.value = author.defaultValue;
+        status.value = status.defaultValue;
+        createCard(cardContainer, newBook)
+    } else {
+        submitButton.setAttribute("disabled","")
+    }
 })
+
+
+
 
 //Create and show book info on the webpage
 function createCard(place, item) {

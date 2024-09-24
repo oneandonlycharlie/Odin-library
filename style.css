@@ -81,3 +81,19 @@ dialog {
         padding: 10px;
     }
 }
+
+.req {
+    color:brown;
+}
+
+*:required {
+    border: 2px solid brown;
+}
+
+input:valid {
+    border: 2px solid rgba(13, 100, 13, 0.647);
+}
+
+button[type="submit"]:disabled {
+    background-color: grey;
+}
